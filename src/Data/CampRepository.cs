@@ -69,7 +69,7 @@ namespace CoreCodeCamp.Data
 
       if (includeTalks)
       {
-        query = query
+          query = query
           .Include(c => c.Talks)
           .ThenInclude(t => t.Speaker);
       }
