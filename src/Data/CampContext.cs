@@ -63,7 +63,7 @@ namespace CoreCodeCamp.Data
         },
         new
         {
-          TalkId = 2,
+          TalkId = 2, 
           CampId = 1,
           SpeakerId = 2,
           Title = "Writing Sample Data Made Easy",

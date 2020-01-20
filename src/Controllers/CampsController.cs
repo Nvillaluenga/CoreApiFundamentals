@@ -41,6 +41,7 @@ namespace CoreCodeCamp.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, $"Database Error {e.Message}");
             }
         }
+
         [HttpGet("{moniker}")]
         public async Task<ActionResult<CampModel>> Get(string moniker)
         {
@@ -57,6 +58,7 @@ namespace CoreCodeCamp.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Database Error");
             }
         }
+
         [HttpGet("search")]
         public async Task<ActionResult<CampModel[]>> SearchByDate(DateTime theDate, bool includeTalks = false)
         {
@@ -71,6 +73,7 @@ namespace CoreCodeCamp.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Database Error");
             }
         }
+
         public async Task<ActionResult<CampModel>> Post(/*[FromBody]*/CampModel model)
         {
             try
@@ -100,6 +103,7 @@ namespace CoreCodeCamp.Controllers
             }
             return BadRequest();
         }
+
         [HttpPut("{moniker}")]
         public async Task<ActionResult<CampModel>> Put(string moniker, CampModel model)
         {
@@ -118,6 +122,7 @@ namespace CoreCodeCamp.Controllers
             }
             return BadRequest();
         }
+
         [HttpDelete("{moniker}")]
         public async Task<IActionResult> Delete(string moniker)
         {
